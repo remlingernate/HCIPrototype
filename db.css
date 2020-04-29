@@ -1,0 +1,198 @@
+.tile {
+    color:black;
+    border-top: solid black 8px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    padding: 8px;
+    vertical-align: top;
+    cursor: pointer;
+    margin-bottom: 6px;
+}
+
+.left {
+    position: fixed;
+    left: 10px;
+    font-size: 50px;
+    font-weight: bolder;
+    display: none;
+    opacity: 0.25;
+    transform: scale(1, 2);
+    cursor: pointer;
+}
+
+.right {
+    position: fixed;
+    right: 10px;
+    font-size: 50px;
+    font-weight: bolder;
+    opacity: 0.25;
+    transform: scale(1, 2);
+    cursor: pointer;
+}
+
+.class-0 {
+    top: 64.5%;
+}
+
+.class-1 {
+    top: 86%;
+}
+
+#specialStuff .tile {
+    background-color: #BBBBBB;
+    border-color: #696969;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+#specialStuff .tile h4 {
+    margin-bottom: 15px;
+}
+
+.label {
+    font-size: 1.47em;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.2em;
+    margin-bottom: 3px;
+    margin-top: 32px;
+}
+
+body {
+    background-color: #EEEEEE;
+    text-align: center;
+    position: relative;
+}
+
+.info {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#page-mask {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+.x {
+	box-shadow: inset 0px 1px 0px 0px #f29c93;
+	background-color: #fe1a00;
+	border-radius: 6px;
+	border: 1px solid #d83526;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 6px 24px;
+	text-decoration: none;
+    text-shadow: 0px 1px 0px #b23e35;
+}
+.x:hover {
+	background-color: #ce0100;
+}
+.x:active {
+	position: relative;
+	top: 1px;
+}
+
+#time {
+    overflow: hidden;
+    font-family: monospace;
+    font-size: 10.16em;
+    margin: 0 64px;
+    font-variant-numeric: tabular-nums lining-nums;
+    cursor: default;
+}
+
+.time {
+    border-radius: 5px;
+}
+
+.listArea {
+    overflow-x: scroll;
+    white-space: nowrap;
+    position: relative;
+}
+
+.listArea .tile {
+    font-size: 1.07em;
+}
+
+.end {
+    margin-right: 5px;
+}
+
+.item {
+    display: inline-block;
+    -moz-box-shadow: 2px 2px 5px rgba(33,33,33,1);
+    /* Safari+Chrome */
+    -webkit-box-shadow: 2px 2px 5px rgba(33,33,33,.7);
+    /* Opera */
+    box-shadow: 2px 2px 5px rgba(33,33,33,.7);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Colors mostly taken from MTA train line labels, then tweaked for distinctiveness*/
+.hardy {
+    border-color: #FCCC0A;
+    background-color: #FEF4CE;
+}
+
+.hogg {
+    border-color: #B0B0FF;
+    background-color: #E3E3FF;
+}
+
+.killian {
+    border-color: #00933C;
+    background-color: #CCE9D8;
+}
+
+.liffick {
+    border-color: #0039A6;
+    background-color: #CCD7ED;
+}
+
+.nguyen {
+    border-color: #EE352E;
+    background-color: #FBD6D5;
+}
+
+.rogers {
+    border-color: #996633;
+    background-color: #E0D1C1;
+}
+
+.schwartz {
+    border-color: #B933AD;
+    background-color: #EAC1E6;
+}
+
+.stone {
+    border-color: #D87093;
+    background-color: #F3D4DE;
+}
+
+.zoppetti {
+    border-color: #A7A9AC;
+    background-color: #E4E5E6;
+}

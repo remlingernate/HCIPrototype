@@ -1,0 +1,432 @@
+<html>
+    <!--All data shown in this prototype is as if it is a Tuesday during the spring 2020 semester-->
+    <head>
+        <link rel="stylesheet" type="text/css" href="db.css">
+        <script type="text/javascript" src="db.js"></script>
+    </head>
+    <body onload="startTime()">
+        <div id="specialStuff" class="listArea">
+            <div class="tile item" onclick="showInfo('tutor')">
+                <h1>CS Tutoring</h1>
+                <h3>Roddy 140</h3>
+                <h4>Today: 5PM-8PM with Ryan</h4>
+            </div>
+            <div class="tile item" onclick="showInfo('linux')">
+                <h1>Linux Lab</h1>
+                <h3>In use: CSCI 362</h3>
+                <h4>In use until: 3:50PM</h4>
+            </div>
+            <div class="tile item" onclick="showInfo('mac')">
+                <h1>Mac Lab</h1>
+                <h3>Open</h3>
+                <h4>Open until: 3:00PM</h4>
+            </div>
+            <div class="tile item time">
+                <h1 id="time"></h1>
+            </div>
+        </div>
+        <h1 class="label">// Office Hours</h1>
+        <div id="profs" class="listArea">
+            <div class="tile item hardy" onclick="showInfo('hardy')">
+                <h1>Dr. Hardy</h1>
+                <h3>Roddy 138</h3>
+                <h4>Today: No Data</h4>
+            </div>
+            <div class="tile item hogg" onclick="showInfo('hogg')">
+                <h1>Dr. Hogg</h1>
+                <h3>Roddy 138</h3>
+                <h4>Today: 10AM-11:50AM</h4>
+            </div>
+            <div class="tile item killian" onclick="showInfo('killian')">
+                <h1>Dr. Killian</h1>
+                <h3>Roddy 141</h3>
+                <h4>Today: None</h4>
+            </div>
+            <div class="tile item liffick" onclick="showInfo('liffick')">
+                <h1>Dr. Liffick</h1>
+                <h3>Roddy 134</h3>
+                <h4>Today: None</h4>
+            </div>
+            <div class="tile item nguyen" onclick="showInfo('nguyen')">
+                <h1>Mr. Nguyen</h1>
+                <h3>Roddy 139</h3>
+                <h4>Today: None</h4>
+            </div>
+            <div class="tile item rogers" onclick="showInfo('rogers')">
+                <h1>Mr. Rogers</h1>
+                <h3>Roddy 139</h3>
+                <h4>Today: 5PM-7PM</h4>
+            </div>
+            <div class="tile item schwartz" onclick="showInfo('schwartz')">
+                <h1>Dr. Schwartz</h1>
+                <h3>Roddy 133</h3>
+                <h4>Today: None</h4>
+            </div>
+            <div class="tile item stone" onclick="showInfo('stone')">
+                <h1>Dr. Stone</h1>
+                <h3>Roddy 139</h3>
+                <h4>Today: No Data</h4>
+            </div>
+            <div class="tile item zoppetti" onclick="showInfo('zoppetti')">
+                <h1>Dr. Zoppetti</h1>
+                <h3>Roddy 134</h3>
+                <h4>Today: None</h4>
+            </div>
+        </div>
+        <h1 class="label">// Classes</h1>
+        <div id="class0" class="listArea" onscroll="arrows('class0')">
+            <div class="tile item nguyen" onclick="showInfo('101')">
+                <h1>101: Problem Solving with Computers</h1>
+                <h3>Roddy 154</h3>
+                <h4>Today: None</h4>
+            </div>
+            <div class="tile item hardy" onclick="showInfo('140.01')">
+                <h1>140.01: Discrete Structures</h1>
+                <h3>Roddy 147</h3>
+                <h4>Today: 1:10PM-3PM</h4>
+            </div>
+            <div class="tile item hardy" onclick="showInfo('140.02')">
+                <h1>140.02: Discrete Structures</h1>
+                <h3>Roddy 147</h3>
+                <h4>Today: None</h4>
+            </div>
+            <div class="tile item stone" onclick="showInfo('140.03')">
+                <h1>140.03: Discrete Structures</h1>
+                <h3>Roddy 136</h3>
+                <h4>Today: None</h4>
+            </div>
+            <div class="tile item liffick" onclick="showInfo('161.01')">
+                <h1>161.01: Introduction to Programming I</h1>
+                <h3>Roddy 147/130</h3>
+                <h4>Today: None</h4>
+            </div>
+            <div class="tile item rogers" onclick="showInfo('161.02')">
+                <h1>161.02: Introduction to Programming I</h1>
+                <h3>Roddy 147/136</h3>
+                <h4>Today: 3:10PM-5PM</h4>
+            </div>
+            <div class="tile item rogers" onclick="showInfo('161.03')">
+                <h1>161.03: Introduction to Programming I</h1>
+                <h3>Roddy 147/136</h3>
+                <h4>Today: 5:10PM-7PM</h4>
+            </div>
+            <div class="tile item zoppetti" onclick="showInfo('162.01')">
+                <h1>162.01: Introduction to Programming II</h1>
+                <h3>Roddy 147</h3>
+                <h4>Today: None</h4>
+            </div>
+            <div class="tile item zoppetti" onclick="showInfo('162.02')">
+                <h1>162.02: Introduction to Programming II</h1>
+                <h3>Roddy 147</h3>
+                <h4>Today: None</h4>
+            </div>
+            <div class="tile item schwartz" onclick="showInfo('162.03')">
+                <h1>162.03: Introduction to Programming II</h1>
+                <h3>Roddy 147</h3>
+                <h4>Today: None</h4>
+            </div>
+            <div class="tile item schwartz end" onclick="showInfo('330')">
+                <h1>330: Programming Languages</h1>
+                <h3>Roddy 256</h3>
+                <h4>Today: 10AM-11:50AM</h4>
+            </div>
+        </div>
+        <div id="class0-left" class="left class-0" onmousedown="startList('class0', 'left')" onmouseup="stopList('class0', 'left')"> 
+            <p><</p>
+        </div>
+        <div id="class0-right" class="right class-0" onmousedown="startList('class0', 'right')" onmouseup="stopList('class0', 'right')">
+            <p>></p>
+        </div>
+        <div id="class1" class="listArea" onscroll="arrows('class1')">
+            <div class="tile item schwartz" onclick="showInfo('340.01')">
+                <h1>340.01: Computational Models</h1>
+                <h3>Roddy 256</h3>
+                <h4>Today: 1:10PM-3PM</h4>
+            </div>
+            <div class="tile item schwartz" onclick="showInfo('340.02')">
+                <h1>340.02: Computational Models</h1>
+                <h3>Roddy 256</h3>
+                <h4>Today: 3:10PM-5PM</h4>
+            </div>
+            <div class="tile item killian" onclick="showInfo('362.01')">
+                <h1>362.01: Data Structures</h1>
+                <h3>Roddy 147/136</h3>
+                <h4>Today: 8AM-9:50AM</h4>
+            </div>
+            <div class="tile item killian" onclick="showInfo('362.02')">
+                <h1>362.02: Data Structures</h1>
+                <h3>Roddy 147/136</h3>
+                <h4>Today: 10AM-11:50AM</h4>
+            </div>
+            <div class="tile item hogg" onclick="showInfo('366.01')">
+                <h1>366.01: Database and Web Dev</h1>
+                <h3>Roddy 136</h3>
+                <h4>Today: None</h4>
+            </div>
+            <div class="tile item hogg" onclick="showInfo('366.02')">
+                <h1>366.02: Database and Web Dev</h1>
+                <h3>Roddy 136</h3>
+                <h4>Today: 8AM-9:50AM</h4>
+            </div>
+            <div class="tile item hogg" onclick="showInfo('366.03')">
+                <h1>366.03: Database and Web Dev</h1>
+                <h3>Roddy 136</h3>
+                <h4>Today: None</h4>
+            </div>
+            <div class="tile item zoppetti" onclick="showInfo('380')">
+                <h1>380: Operating Systems</h1>
+                <h3>Roddy 147</h3>
+                <h4>Today: None</h4>
+            </div>
+            <div class="tile item hardy" onclick="showInfo('395')">
+                <h1>395: Computer Networks</h1>
+                <h3>Roddy 136</h3>
+                <h4>Today: 10AM-11:50AM</h4>
+            </div>
+            <div class="tile item killian" onclick="showInfo('420')">
+                <h1>420: Software Engineering</h1>
+                <h3>Roddy 136</h3>
+                <h4>Today: 1:10PM-3PM</h4>
+            </div>
+            <div class="tile item liffick" onclick="showInfo('425')">
+                <h1>425: Human-Computer Interaction</h1>
+                <h3>Roddy 136</h3>
+                <h4>Today: None</h4>
+            </div>
+            <div class="tile item killian end" onclick="showInfo('476')">
+                <h1>476: Parallel Programming</h1>
+                <h3>Roddy 136</h3>
+                <h4>Today: None</h4>
+            </div>
+        </div>
+        <div id="class1-left" class="left class-1" onmousedown="startList('class1', 'left')" onmouseup="stopList('class1', 'left')">
+            <p><</p>
+        </div>
+        <div id="class1-right" class="right class-1" onmousedown="startList('class1', 'right')" onmouseup="stopList('class1', 'right')">
+            <p>></p>
+        </div>
+        <div id="page-mask"></div>
+        <div class="info" id="liffick-info">
+            <div class="container">
+                <img src="liffick.png">
+                <button onclick="hideInfo('liffick')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="425-info">
+            <div class="container">
+                <img src="425.png">
+                <button onclick="hideInfo('425')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="tutor-info">
+            <div class="container">
+                <img src="tutor.png">
+                <button onclick="hideInfo('tutor')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="linux-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('linux')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="mac-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('mac')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="hardy-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('hardy')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="hogg-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('hogg')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="killian-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('killian')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="nguyen-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('nguyen')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="rogers-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('rogers')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="schwartz-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('schwartz')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="stone-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('stone')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="zoppetti-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('zoppetti')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="101-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('101')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="140.01-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('140.01')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="140.02-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('140.02')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="140.03-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('140.03')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="161.01-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('161.01')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="161.02-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('161.02')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="161.03-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('161.03')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="162.01-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('162.01')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="162.02-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('162.02')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="162.03-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('162.03')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="161.01-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('161.01')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="161.02-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('161.02')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="330-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('330')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="340.01-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('340.01')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="340.02-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('340.02')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="362.01-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('362.01')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="362.02-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('362.02')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="366.01-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('366.01')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="366.02-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('366.02')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="366.03-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('366.03')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="380-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('380')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="395-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('395')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="420-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('420')" class="x">Close</button>
+            </div>
+        </div>
+        <div class="info" id="476-info">
+            <div class="container">
+                <img src="missing.png">
+                <button onclick="hideInfo('476')" class="x">Close</button>
+            </div>
+        </div>
+    </body>
+</html>
